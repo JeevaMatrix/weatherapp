@@ -1,6 +1,5 @@
 const menuIcons = document.querySelectorAll(".menu");
 const sideBar = document.querySelector(".sidebar");
-
 const celcius = document.getElementById("celcius")
 const weather = document.getElementById("weather")
 const precip = document.getElementById("Precipitation")
@@ -66,7 +65,7 @@ locbtn.addEventListener("click", function(){
 function receive(city){
     const apiKey = "08941362fa1d5df5c3e0a14e45361f99"
     const apiLink = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`
-
+    toploc.innerText = city
     fetch(apiLink)
     .then(res => res.json())
     .then(data => getLocation(data,apiKey))
