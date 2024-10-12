@@ -61,10 +61,19 @@ locbtn.addEventListener("click", function(){
     toploc.innerText = city
     receive(city)
 })
+input.addEventListener("keydown", function(e){
+    if(e.key === "Enter"){
+        const city = input.value;
+        localStorage.setItem("location",city)
+        toploc.innerText = city
+        input.value= ''
+        receive(city)
+    }
+})
 
 function receive(city){
     const apiKey = "08941362fa1d5df5c3e0a14e45361f99"
-    const apiLink = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`
+    const apiLink = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`
     toploc.innerText = city
     fetch(apiLink)
     .then(res => res.json())
@@ -97,7 +106,7 @@ function changeData(data){
     const windSpeed =(( data.wind.speed)).toFixed(1);
     const pressure = ((data.main.pressure) * 0.02953).toFixed(2);
     const iconCode = mainDescData.icon
-    mainIcon.src = `http://openweathermap.org/img/wn/${iconCode}@2x.png`
+    mainIcon.src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`
 
     celcius.innerText = temperature +"°C"
     weather.innerText = mainDesc
@@ -131,7 +140,7 @@ function changeforecast(data2){
         const descdata = cast.weather[0]
         const desc = descdata.description
         const foreIconCode = descdata.icon
-        const foreIconSrc = `http://openweathermap.org/img/wn/${foreIconCode}@2x.png`
+        const foreIconSrc = `https://openweathermap.org/img/wn/${foreIconCode}@2x.png`
 
         //to find no rains
         if (cast.rain){
