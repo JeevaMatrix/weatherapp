@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About This Project</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/nav.css">
+    <link rel="stylesheet" href="style/forecast.css">
+    <style>
+        body {
+            line-height: 1.6;
+            margin: 0px;
+            padding: 0;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section-title {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        #aboutPage{
+            background-color: aliceblue;
+            border-radius: 16px 16px 16px 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 221, 255, 0.3);
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidecontainer">
+            <a href="#" class="menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: 0;"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg></a>
+            <div class="sidemenu">
+                <a href="/index.html#mainSection">Weather now</a>
+                <a href="/index.html#forecastSection">Forecast</a>
+                <a href="">Monthly chart</a>
+                <a href="/about.html">About</a>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <a href="" class="menu" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: 0; "><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg></a>
+        <div class="nav1">
+            <img src="./img/icon.png" alt="weather" id="topIcon">
+            <a href="/index.html#mainSection">Weather now</a>
+            <a href="/index.html#forecastSection">Forecast</a>
+            <a href="">Monthly chart</a>
+        </div>
+        <div class="nav2">
+            <!-- <div class="loc">
+                <input type="search" id="location" placeholder="Location">
+                <button id="searchbtn">Go</button>
+                <label for="location">Select location</label>
+            </div> -->
+            <a href="/about.html">About</a>
+        </div>
+    </nav>
+    <section id="aboutPage">
+    <h1>About this Project</h1>
+    <p>Welcome to my Weather App project! This web application was created as a part of my learning journey into web development, specifically focusing on API integration and creating dynamic, user-friendly interfaces.</p>
+
+    <h2 class="section-title">Key Features:</h2>
+    <ul>
+        <li><strong>Current Weather Data:</strong> The app retrieves and displays real-time weather information such as temperature, precipitation rate, humidity, pressure, and wind speed.</li>
+        <li><strong>5-Day Forecast:</strong> You can also view the upcoming weather forecast for the next five days.</li>
+        <li><strong>Hourly Forecast:</strong> There's a scrollable section that shows the forecast for each hour of the day, helping you stay prepared for any weather changes.</li>
+        <li><strong>Location-Based Data:</strong> The app automatically retrieves weather data based on the user's location and updates the display in real-time when the page is refreshed.</li>
+        <li><strong>Smooth Scrolling Navigation:</strong> The navigation links offer smooth transitions between different sections of the page for a better user experience.</li>
+    </ul>
+
+    <h2 class="section-title">Technologies Used:</h2>
+    <ul>
+        <li><strong>HTML/CSS/JavaScript:</strong> For building the structure, style, and interactivity of the website.</li>
+        <li><strong>OpenWeather API:</strong> This project uses the OpenWeather API to fetch all the necessary weather data and forecast information.</li>
+        <li><strong>Flexbox & Grid Layouts:</strong> To create responsive designs that adjust seamlessly on different screen sizes.</li>
+        <li><strong>Responsive Design:</strong> The app adapts well on both mobile and desktop screens, offering a consistent experience across devices.</li>
+    </ul>
+
+    <h2 class="section-title">Experience:</h2>
+    <p>I thoroughly enjoyed working on this project and learned a lot throughout the development process. I had the opportunity to dive deeper into API handling, weather data integration, and improving UI/UX design. MSN Weather served as a primary inspiration for the layout, helping me craft a visually appealing and easy-to-use interface.</p>
+
+    <p>This project helped me enhance my web development skills, particularly in API integration, CSS animations, and JavaScript functionality. Overall, it was a rewarding experience that gave me practical insights into building dynamic web applications.</p>
+</section>
+<footer>
+    <div class="foot1">
+        <ul>
+            <li><a href="/index.html#mainSection">Current Weather</a></li>
+            <li><a href="/index.html#forecastSection">Forecast</a></li>
+            <li><a href="/about.html">About this page</a></li>
+        </ul>
+    </div>
+    <div class="foot2">
+        <!-- <div class="loc">
+            <input type="search" id="location" placeholder="Location">
+            <button id="searchbtn">Go</button>
+            <label for="location">Select location</label>
+        </div> -->
+    </div>
+</footer>
+<script src="about.js"></script>
+</body>
+</html>

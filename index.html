@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/nav.css">
+    <link rel="stylesheet" href="style/forecast.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+    </style>
+</head>
+<body id="top">
+    <div class="sidebar">
+        <div class="sidecontainer">
+            <a href="#top" class="menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: 0;"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg></a>
+            <div class="sidemenu">
+                <a href="#mainSection">Weather now</a>
+                <a href="#forecastSection">Forecast</a>
+                <a href="">Monthly chart</a>
+                <a href="/about.html">About</a>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <a href="" class="menu" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: 0; "><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path></svg></a>
+        <div class="nav1">
+            <img src="./img/icon.png" alt="weather" id="topIcon">
+            <a href="#mainSection">Weather now</a>
+            <a href="#forecastSection">Forecast</a>
+            <a href="">Monthly chart</a>
+        </div>
+        <div class="nav2">
+            <div class="loc">
+                <input type="search" id="location" placeholder="Location">
+                <button id="searchbtn">Go</button>
+                <label for="location">Select location</label>
+            </div>
+            <a href="/about.html">About</a>
+        </div>
+    </nav>
+    <p id="toploc"></p>
+
+    
+    <section id="mainSection">
+        <div class="container">
+            <div class="main">
+                <div class="main1">
+                    <img src="img/icon.png" alt="weather" id="mainIcon">
+                    <div class="temp">
+                        <h1 id="celcius">36 °C</h1>
+                        <h2 id="weather">Mostly cloudy</h2>
+                    </div>
+                </div>
+                <div class="main2">
+                    <h5>Precipitation</h5>
+                    <p id="Precipitation">2.73 in</p>
+                </div>
+            </div>
+            <div class="side">
+                <div class="humid">
+                    <h5>Humidity</h5>
+                    <p id="hum">84%</p>
+                </div>
+                <div class="wind">
+                    <h5>Wind</h5>
+                    <p id="win">3 mph</p>
+                </div>
+                <div class="pressure">
+                    <h5>Pressure</h5>
+                    <p id="pres">24.12 in</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <section id="forecastSection">
+        <p id="forecastId">3 hour Forecast</p>
+        <div class="forecast">
+            <!-- <p>12 AM</p>
+            <p>10 oct</p>
+            <img src="./img/cloudy.png" alt="">
+            <p class = "displayWeather">26 °C</p>
+            <p class = "displayWeather">cloudy</p> -->
+        </div>
+    </section>
+    <footer>
+        <div class="foot1">
+            <ul>
+                <li><a href="/index.html#mainSection">Current Weather</a></li>
+                <li><a href="/index.html#forecastSection">Forecast</a></li>
+                <li><a href="/about.html">About this page</a></li>
+            </ul>
+        </div>
+        <div class="foot2">
+            <div class="loc">
+                <input type="search" id="location" placeholder="Location">
+                <button id="searchbtn">Go</button>
+                <label for="location">Select location</label>
+            </div>
+            <div class="creator">
+                <h5>Created By</h5>
+                <p>Jeevanandh R</p>
+            </div>
+        </div>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
