@@ -22,6 +22,9 @@ window.addEventListener("DOMContentLoaded", function(){
         }
         receive(savedLocation)
     }
+    else{
+        receive("Chennai")
+    }
 })
 
 const dp = new Date()
