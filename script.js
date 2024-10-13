@@ -42,7 +42,7 @@ menuIcons.forEach(menuIcon => {
             toploc.style.zIndex = -1
             setTimeout(()=>{
                 sideBar.style.transform = "translateX(0%)"
-            },1)
+            },100)
         } else {
             sideBar.style.transform = "translateX(-100%)"
             setTimeout(()=>{
@@ -238,9 +238,10 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
 });
 
 // optional link prevent default
-const optLink = document.querySelectorAll('.optional')
-optLink.addEventListener("click", function(e){
-    e.preventDefault();
+document.querySelectorAll('.optional').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+    });
 });
 
 document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
@@ -257,6 +258,13 @@ document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
     });
 });
 
+document.querySelectorAll(".menu").forEach(anchor =>{
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+    })
+});
+
+//modified
 // document.querySelectorAll('.sidebar a').forEach(anchor => {
 //     anchor.addEventListener('click', function(e) {
 //         e.preventDefault();
@@ -268,8 +276,3 @@ document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
 //     });
 // });
 
-// document.querySelectorAll("nav a").forEach(anchor =>{
-//     anchor.addEventListener('click', function (e) {
-//         e.preventDefault();
-//     }
-// });
