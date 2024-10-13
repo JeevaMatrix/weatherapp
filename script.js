@@ -70,6 +70,23 @@ input.addEventListener("keydown", function(e){
         receive(city)
     }
 })
+const locbtn1 = document.getElementById("searchbtn1")
+const input1 = document.getElementById("location1")
+locbtn1.addEventListener("click", function(){
+    const city = input1.value;
+    localStorage.setItem("location",city)
+    toploc.innerText = city
+    receive(city)
+})
+input1.addEventListener("keydown", function(e){
+    if(e.key === "Enter"){
+        const city = input1.value;
+        localStorage.setItem("location",city)
+        toploc.innerText = city
+        input1.value= ''
+        receive(city)
+    }
+})
 
 function receive(city){
     const apiKey = "08941362fa1d5df5c3e0a14e45361f99"
@@ -220,10 +237,10 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     });
 });
 
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-    });
+// optional link prevent default
+const optLink = document.querySelectorAll('.optional')
+optLink.addEventListener("click", function(e){
+    e.preventDefault();
 });
 
 document.querySelectorAll('.sidebar a[href^="#"]').forEach(anchor => {
